@@ -10,7 +10,7 @@
  * @return void
  * @author Mykola Martynov
  **/
-function addUnsubscribeEmail($info)
+function logUnsubscribeEmail($info)
 {
     $log_file = LOG_DIR . date('Ymd-H') . '.log';
     $fh = fopen($log_file, 'a');

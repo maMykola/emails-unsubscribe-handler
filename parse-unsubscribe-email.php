@@ -20,7 +20,7 @@ $subject = strtolower(getHeaderValue($headers, 'subject'));
 # save sender email to the log file if criteria matched
 if (!empty($to) && !empty($subject) && $to == LIST_UNSUBSCRIBE_EMAIL && $subject == LIST_UNSUBSCRIBE_SUBJECT) {
     $date = getHeaderValue($headers, 'date', date('Y-m-d H:i:s'));
-    addUnsubscribeEmail([
+    logUnsubscribeEmail([
         'email' => $from,
         'date' => $date,
         ]);
