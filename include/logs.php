@@ -12,4 +12,8 @@
  **/
 function addUnsubscribeEmail($info)
 {
+    $log_file = LOG_DIR . date('Ymd-H') . '.log';
+    $fh = fopen($log_file, 'a');
+    fputs($fh, serialize($info) . PHP_EOL);
+    fclose($fh);
 }
