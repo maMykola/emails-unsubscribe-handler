@@ -6,6 +6,9 @@ require_once __DIR__ . '/include/constants.php';
 require_once __DIR__ . '/include/messages.php';
 require_once __DIR__ . '/include/logs.php';
 
+# set default permission for log files
+umask(027);
+
 # get message headers
 $headers = getMessageHeaders(STDIN);
 
